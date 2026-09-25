@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Deft Shamim — Systems & Automation Developer</title>
+<title>Deft Shamim â€” Systems & Automation Developer</title>
 <meta name="description" content="Independent developer building trading systems, real-time infrastructure, and automation. Available for hire and productized builds.">
 <meta property="og:title" content="Deft Shamim, Systems & Automation Developer">
 <meta property="og:description" content="Trading systems, real-time infrastructure, and automation. Available for hire and productized builds.">
@@ -153,6 +153,7 @@
   .contact h2{font-size:clamp(1.6rem,3.6vw,2.1rem)}
   .contact p{color:var(--muted); max-width:50ch; margin:12px auto 22px}
   .copyfield{display:inline-flex; align-items:center; gap:10px; background:var(--surface-2); border:1px solid var(--border); border-radius:11px; padding:10px 14px; font-family:var(--mono); font-size:.92rem; max-width:100%; flex-wrap:wrap; justify-content:center}
+  #email{overflow-wrap:anywhere; min-width:0} .contact .copyfield{max-width:100%}
   .copyfield button{background:var(--accent); color:#04130e; border:none; border-radius:8px; padding:6px 12px; font-family:var(--mono); font-size:.78rem; cursor:pointer}
   .links{display:flex; gap:16px; justify-content:center; margin-top:18px; flex-wrap:wrap}
   .links a{color:var(--muted); font-family:var(--mono); font-size:.85rem}
@@ -382,7 +383,7 @@
   function stepTickers(){ syms.forEach(function(t,i){ t.p=Math.max(t.p+(Math.random()-.5)*t.v, t.base*.5); var chg=(t.p-t.base)/t.base*100; var pxE=document.getElementById('px'+i), chgE=document.getElementById('chg'+i); if(pxE)pxE.textContent=fmt(t.p); if(chgE){chgE.textContent=(chg>=0?'+':'')+chg.toFixed(2)+'%'; chgE.className='chg '+(chg>=0?'up':'down');} }); }
 
   var logEl=document.getElementById('log');
-  var msgs=['SolExec: signal received · SOL','SolExec: validation passed','SolExec: order filled via Jupiter','AlphaDesk: SMC demand zone tagged','RugRadar: scanned mint, risk LOW','PriceStream: TWAP window refreshed','AlphaDesk: liquidity sweep detected','SolExec: position managed, TP set'];
+  var msgs=['SolExec: signal received Â· SOL','SolExec: validation passed','SolExec: order filled via Jupiter','AlphaDesk: SMC demand zone tagged','RugRadar: scanned mint, risk LOW','PriceStream: TWAP window refreshed','AlphaDesk: liquidity sweep detected','SolExec: position managed, TP set'];
   function logLine(){ var row=document.createElement('div'); row.className='row'; var t=new Date().toLocaleTimeString('en-GB',{hour12:false}); row.innerHTML='<span>'+t+'</span> '+msgs[Math.floor(Math.random()*msgs.length)]; logEl.appendChild(row); while(logEl.children.length>9) logEl.removeChild(logEl.firstChild); }
 
   var cv=document.getElementById('chart'), ctx=cv.getContext('2d');
