@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Deft Shamim — Systems & Automation Developer</title>
 <meta name="description" content="Independent developer building trading systems, real-time infrastructure, and automation. Available for hire and productized builds.">
-<meta property="og:title" content="Deft Shamim — Systems & Automation Developer">
+<meta property="og:title" content="Deft Shamim, Systems & Automation Developer">
 <meta property="og:description" content="Trading systems, real-time infrastructure, and automation. Available for hire and productized builds.">
 <meta property="og:image" content="https://deftluke.github.io/My-portfolio/assets/logo.png">
 <meta property="og:type" content="website">
@@ -14,225 +14,325 @@
 <link rel="apple-touch-icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
   :root{
-    color-scheme: light;
-    --bg:#f6f8fa; --surface:#ffffff; --surface-2:#eef1f4; --border:#d5dbe2;
-    --text:#0b0f14; --muted:#57606a; --accent:#0c8f6d; --accent-2:#2f6fed;
-    --good:#0c8f6d; --warn:#b06a00; --shadow:0 1px 2px rgba(11,15,20,.06),0 8px 24px rgba(11,15,20,.06);
-    --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Manrope',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
-    --maxw:1080px;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      color-scheme: dark;
-      --bg:#0b0f14; --surface:#121821; --surface-2:#0f151d; --border:#1f2a37;
-      --text:#e6edf3; --muted:#8b98a5; --accent:#35d0a5; --accent-2:#6ea8fe;
-      --good:#35d0a5; --warn:#f0b34a; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
-    }
-  }
-  :root[data-theme="dark"]{
     color-scheme: dark;
-    --bg:#0b0f14; --surface:#121821; --surface-2:#0f151d; --border:#1f2a37;
-    --text:#e6edf3; --muted:#8b98a5; --accent:#35d0a5; --accent-2:#6ea8fe;
-    --good:#35d0a5; --warn:#f0b34a; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+    --bg:#070b10; --surface:#0f1620; --surface-2:#0b1219; --border:#1e2a37;
+    --glass:rgba(20,30,42,.55);
+    --text:#e8eef5; --muted:#8a97a6; --accent:#2fe0ad; --accent-2:#57b0ff;
+    --up:#2fe0ad; --down:#ff6b6b;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 18px 50px rgba(0,0,0,.45);
+    --glow:0 0 40px rgba(47,224,173,.18);
+    --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Manrope',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --maxw:1120px;
+  }
+  :root[data-theme="light"]{
+    color-scheme: light;
+    --bg:#f4f7fa; --surface:#ffffff; --surface-2:#eef2f6; --border:#d7dee6;
+    --glass:rgba(255,255,255,.6);
+    --text:#0b1119; --muted:#54626f; --accent:#0c9c74; --accent-2:#2f6fed;
+    --shadow:0 1px 2px rgba(11,17,25,.06), 0 16px 40px rgba(11,17,25,.08);
+    --glow:0 0 40px rgba(12,156,116,.14);
   }
   *{box-sizing:border-box}
-  html,body{margin:0}
-  body{ background:var(--bg); color:var(--text); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  html,body{margin:0; overflow-x:clip; max-width:100%}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg); color:var(--text); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(60% 50% at 78% -5%, rgba(47,224,173,.10), transparent 60%), radial-gradient(50% 45% at 10% 8%, rgba(87,176,255,.08), transparent 60%);
+    background-attachment:fixed;}
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
-  .wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:20px}
-  h1,h2,h3{font-family:var(--display); font-weight:600; line-height:1.15; text-wrap:balance; margin:0}
-  .eyebrow{font-family:var(--mono); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 .6rem}
-  header.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:color-mix(in srgb,var(--bg) 86%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--border)}
-  .bar .wrap{display:flex; align-items:center; gap:14px; min-height:60px; padding-block:10px}
-  .brand{display:inline-flex; align-items:center; gap:9px; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:1.05rem; text-decoration:none; color:var(--text)}
-  .brand img{display:block; width:32px; height:32px; border-radius:7px; flex:none}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
+  img{max-width:100%; display:block}
+  .wrap{width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:20px}
+  h1,h2,h3{font-family:var(--display); font-weight:700; line-height:1.12; text-wrap:balance; margin:0}
+  .eyebrow{font-family:var(--mono); font-size:.76rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 .6rem}
+
+  /* header */
+  header.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:50; background:color-mix(in srgb,var(--bg) 78%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--border)}
+  .bar .wrap{display:flex; align-items:center; gap:14px; min-height:62px; padding-block:9px}
+  .brand{display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-weight:800; letter-spacing:-.02em; font-size:1.08rem; text-decoration:none; color:var(--text)}
+  .brand img{width:34px; height:34px; object-fit:contain; flex:none; filter:drop-shadow(0 2px 10px rgba(47,224,173,.35))}
   .brand b{color:var(--accent)}
-  nav.top{margin-left:auto; display:flex; gap:22px; align-items:center}
-  nav.top a{color:var(--muted); font-size:.92rem; white-space:nowrap}
-  nav.top a:hover{color:var(--text); text-decoration:none}
-  .toggle{background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:8px; padding:7px 10px; cursor:pointer; font-family:var(--mono); font-size:.78rem; white-space:nowrap; flex:none}
-  .btn.cta{padding:8px 14px}
-  @media (max-width:720px){ nav.top a:not(.cta){display:none} nav.top{gap:12px} .btn.cta{padding:7px 12px; font-size:.85rem} }
-  @media (max-width:360px){ .toggle{display:none} }
-  .hero{padding-block:72px 40px; position:relative; overflow:hidden}
-  .hero .grid-bg{position:absolute; inset:0; background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size:44px 44px; opacity:.25; mask-image:radial-gradient(ellipse 70% 60% at 30% 0%,#000 20%,transparent 75%); pointer-events:none}
-  .hero .wrap{position:relative}
-  .status{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:.8rem; color:var(--muted); border:1px solid var(--border); background:var(--surface); padding:5px 11px; border-radius:999px; margin-bottom:22px}
-  .dot{width:8px; height:8px; border-radius:50%; background:var(--good); box-shadow:0 0 0 3px color-mix(in srgb,var(--good) 22%,transparent)}
-  .hero h1{font-size:clamp(2.1rem,6vw,3.6rem); font-weight:700; letter-spacing:-.02em; max-width:16ch}
-  .hero h1 .hl{color:var(--accent)}
-  .lede{color:var(--muted); font-size:clamp(1.02rem,2.4vw,1.22rem); max-width:60ch; margin-top:18px}
-  .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
-  .btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-weight:600; font-size:.95rem; padding:12px 20px; border-radius:10px; border:1px solid var(--border); cursor:pointer}
-  .btn.primary{background:var(--accent); color:#04120d; border-color:transparent}
-  .btn.primary:hover{filter:brightness(1.06); text-decoration:none}
+  nav.top{margin-left:auto; display:flex; gap:20px; align-items:center}
+  nav.top a.nav{color:var(--muted); font-size:.92rem; white-space:nowrap}
+  nav.top a.nav:hover{color:var(--text); text-decoration:none}
+  .toggle{background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:9px; padding:7px 10px; cursor:pointer; font-family:var(--mono); font-size:.76rem; white-space:nowrap; flex:none}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; font-family:var(--display); font-weight:700; font-size:.95rem; padding:12px 20px; border-radius:11px; border:1px solid var(--border); cursor:pointer; transition:transform .15s ease, box-shadow .2s ease}
+  .btn.primary{background:linear-gradient(180deg, var(--accent), color-mix(in srgb,var(--accent) 80%, #000)); color:#04130e; border-color:transparent; box-shadow:var(--glow)}
+  .btn.primary:hover{transform:translateY(-1px); text-decoration:none}
   .btn.ghost{background:var(--surface); color:var(--text)}
-  .btn.ghost:hover{border-color:var(--accent); text-decoration:none}
-  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:34px}
-  .tag{font-family:var(--mono); font-size:.78rem; color:var(--muted); border:1px solid var(--border); border-radius:7px; padding:5px 10px; background:var(--surface-2)}
-  section{padding-block:52px}
-  .sec-head{margin-bottom:28px; max-width:64ch}
-  .sec-head h2{font-size:clamp(1.5rem,3.4vw,2rem); letter-spacing:-.01em}
+  .btn.ghost:hover{border-color:var(--accent); text-decoration:none; transform:translateY(-1px)}
+  .btn.cta{padding:9px 15px; font-size:.9rem}
+  @media (max-width:760px){ nav.top a.nav{display:none} nav.top{gap:10px} }
+  @media (max-width:380px){ .toggle{display:none} }
+
+  section{padding-block:56px; position:relative}
+  .sec-head{margin-bottom:30px; max-width:60ch}
+  .sec-head h2{font-size:clamp(1.6rem,3.6vw,2.1rem); letter-spacing:-.015em}
   .sec-head p{color:var(--muted); margin:.6rem 0 0}
-  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
-  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px}
-  .card h3{font-size:1.08rem; margin-bottom:8px}
-  .card p{color:var(--muted); font-size:.94rem; margin:0}
-  .card .ic{font-family:var(--mono); color:var(--accent); font-size:.8rem; letter-spacing:.1em; display:block; margin-bottom:12px}
-  .projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px}
-  .proj{background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; display:flex; flex-direction:column; gap:14px}
+
+  /* hero */
+  .hero{padding-block:76px 44px; overflow:clip}
+  .hero .grid{position:absolute; inset:-2px; z-index:0; background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size:46px 46px; opacity:.22; mask-image:radial-gradient(ellipse 75% 65% at 30% 0%, #000 15%, transparent 72%)}
+  .hero .wrap{position:relative; z-index:1}
+  .status{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:.78rem; color:var(--muted); border:1px solid var(--border); background:var(--glass); backdrop-filter:blur(6px); padding:6px 12px; border-radius:999px; margin-bottom:22px}
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--up); box-shadow:0 0 0 3px color-mix(in srgb,var(--up) 22%,transparent)}
+  .hero h1{font-size:clamp(2.1rem,6vw,3.7rem); font-weight:800; letter-spacing:-.025em; max-width:17ch}
+  .hero h1 .hl{background:linear-gradient(120deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .lede{color:var(--muted); font-size:clamp(1.02rem,2.3vw,1.2rem); max-width:58ch; margin-top:18px}
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:32px}
+  .tag{font-family:var(--mono); font-size:.76rem; color:var(--muted); border:1px solid var(--border); border-radius:8px; padding:5px 10px; background:var(--surface-2)}
+
+  /* terminal */
+  .term-wrap{margin-top:8px}
+  .terminal{border:1px solid var(--border); border-radius:16px; overflow:hidden; background:linear-gradient(180deg,#0a1017,#070c11); box-shadow:var(--shadow), var(--glow)}
+  .term-top{display:flex; align-items:center; gap:10px; padding:11px 14px; border-bottom:1px solid var(--border); background:rgba(255,255,255,.02)}
+  .term-top .lights{display:flex; gap:6px}
+  .term-top .lights i{width:11px; height:11px; border-radius:50%; display:block}
+  .l1{background:#ff5f57}.l2{background:#febc2e}.l3{background:#28c840}
+  .term-title{font-family:var(--mono); font-size:.8rem; color:var(--muted)}
+  .term-badge{margin-left:auto; font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; color:var(--accent); border:1px solid color-mix(in srgb,var(--accent) 40%,var(--border)); border-radius:999px; padding:3px 9px}
+  .tickers{display:flex; gap:0; border-bottom:1px solid var(--border); overflow-x:auto; scrollbar-width:none}
+  .tickers::-webkit-scrollbar{display:none}
+  .tick{flex:1 0 auto; min-width:120px; padding:10px 14px; border-right:1px solid var(--border); font-family:var(--mono)}
+  .tick .sym{font-size:.72rem; color:var(--muted); letter-spacing:.05em}
+  .tick .px{font-size:1rem; color:var(--text); font-weight:600; font-variant-numeric:tabular-nums}
+  .tick .chg{font-size:.72rem; font-variant-numeric:tabular-nums}
+  .up{color:var(--up)} .down{color:var(--down)}
+  .term-body{display:grid; grid-template-columns:1.6fr 1fr; gap:0}
+  @media (max-width:640px){ .term-body{grid-template-columns:1fr} }
+  .chart-box{position:relative; border-right:1px solid var(--border); min-width:0}
+  #chart{display:block; width:100%; height:240px}
+  .log{padding:12px 14px; font-family:var(--mono); font-size:.74rem; color:var(--muted); height:240px; overflow:hidden; display:flex; flex-direction:column; gap:6px; justify-content:flex-end}
+  .log .row span{color:var(--accent)}
+  .term-foot{padding:9px 14px; border-top:1px solid var(--border); font-family:var(--mono); font-size:.68rem; color:var(--muted)}
+
+  /* generic cards grid */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px}
+  .card{background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--border); border-radius:16px; padding:22px}
+  .card h3{font-size:1.06rem; margin-bottom:8px}
+  .card p{color:var(--muted); font-size:.93rem; margin:0}
+  .card .ic{font-family:var(--mono); color:var(--accent); font-size:.76rem; letter-spacing:.1em; display:block; margin-bottom:12px}
+
+  /* tech stack */
+  .stack-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
+  .stackcard{background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--border); border-radius:16px; padding:20px}
+  .stackcard h3{font-size:.82rem; font-family:var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; font-weight:600}
+  .chiprow{display:flex; flex-wrap:wrap; gap:7px}
+  .chip{font-family:var(--mono); font-size:.76rem; color:var(--text); background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:5px 10px}
+
+  /* projects 3D */
+  .projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; perspective:1200px}
+  .proj{background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--border); border-radius:18px; padding:24px; display:flex; flex-direction:column; gap:14px; transform-style:preserve-3d; transition:transform .18s ease, box-shadow .25s ease, border-color .25s ease; will-change:transform}
+  .proj:hover{box-shadow:var(--shadow); border-color:color-mix(in srgb,var(--accent) 35%,var(--border))}
   .proj-top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px}
-  .proj h3{font-size:1.22rem}
-  .proj .sub{font-family:var(--mono); font-size:.76rem; color:var(--muted); margin-top:3px; letter-spacing:.04em}
-  .pill{font-family:var(--mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; padding:4px 9px; border-radius:999px; white-space:nowrap; border:1px solid var(--border)}
-  .pill.dev{color:var(--warn); border-color:color-mix(in srgb,var(--warn) 45%,var(--border))}
+  .proj h3{font-size:1.2rem}
+  .proj .sub{font-family:var(--mono); font-size:.74rem; color:var(--muted); margin-top:3px}
+  .pill{font-family:var(--mono); font-size:.64rem; letter-spacing:.08em; text-transform:uppercase; padding:4px 9px; border-radius:999px; white-space:nowrap; border:1px solid var(--border)}
+  .pill.dev{color:#f0b34a; border-color:color-mix(in srgb,#f0b34a 45%,var(--border))}
   .pill.priv{color:var(--muted)}
-  .proj p.desc{color:var(--text); font-size:.96rem; margin:0}
-  .stack{display:flex; flex-wrap:wrap; gap:7px; margin-top:auto}
-  .chip{font-family:var(--mono); font-size:.74rem; color:var(--muted); background:var(--surface-2); border:1px solid var(--border); border-radius:6px; padding:3px 8px}
-  .offer-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
-  .offer{background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:26px; display:flex; flex-direction:column}
-  .offer.feature{border-color:color-mix(in srgb,var(--accent) 55%,var(--border)); box-shadow:var(--shadow)}
-  .offer h3{font-size:1.15rem}
-  .offer .price{font-family:var(--mono); color:var(--accent); font-size:.9rem; margin:6px 0 16px}
+  .proj p.desc{color:var(--text); font-size:.95rem; margin:0}
+  .stackline{display:flex; flex-wrap:wrap; gap:7px; margin-top:auto}
+
+  /* offers */
+  .offer-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:18px}
+  .offer{background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--border); border-radius:18px; padding:26px; display:flex; flex-direction:column}
+  .offer.feature{border-color:color-mix(in srgb,var(--accent) 55%,var(--border)); box-shadow:var(--glow)}
+  .offer h3{font-size:1.12rem}
+  .offer .price{font-family:var(--mono); color:var(--accent); font-size:.88rem; margin:6px 0 16px}
   .offer ul{list-style:none; padding:0; margin:0 0 20px; display:flex; flex-direction:column; gap:9px}
-  .offer li{color:var(--muted); font-size:.92rem; padding-left:22px; position:relative}
-  .offer li::before{content:"\2192"; position:absolute; left:0; color:var(--accent); font-family:var(--mono)}
-  .offer .btn{margin-top:auto; justify-content:center}
-  .contact{background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:34px; text-align:center}
-  .contact h2{font-size:clamp(1.5rem,3.4vw,2rem)}
-  .contact p{color:var(--muted); max-width:52ch; margin:12px auto 22px}
-  .copyfield{display:inline-flex; align-items:center; gap:10px; background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:10px 14px; font-family:var(--mono); font-size:.95rem}
-  .copyfield button{background:var(--accent); color:#04120d; border:none; border-radius:7px; padding:6px 12px; font-family:var(--mono); font-size:.8rem; cursor:pointer}
-  .links{display:flex; gap:18px; justify-content:center; margin-top:18px; flex-wrap:wrap}
-  .links a{color:var(--muted); font-family:var(--mono); font-size:.86rem}
-  footer{border-top:1px solid var(--border); padding-block:28px; color:var(--muted); font-family:var(--mono); font-size:.8rem}
+  .offer li{color:var(--muted); font-size:.9rem; padding-left:20px; position:relative}
+  .offer li::before{content:"\203A"; position:absolute; left:2px; color:var(--accent); font-family:var(--mono)}
+  .offer .btn{margin-top:auto}
+
+  /* contact */
+  .contact{background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--border); border-radius:20px; padding:36px; text-align:center; box-shadow:var(--glow)}
+  .contact h2{font-size:clamp(1.6rem,3.6vw,2.1rem)}
+  .contact p{color:var(--muted); max-width:50ch; margin:12px auto 22px}
+  .copyfield{display:inline-flex; align-items:center; gap:10px; background:var(--surface-2); border:1px solid var(--border); border-radius:11px; padding:10px 14px; font-family:var(--mono); font-size:.92rem; max-width:100%; flex-wrap:wrap; justify-content:center}
+  .copyfield button{background:var(--accent); color:#04130e; border:none; border-radius:8px; padding:6px 12px; font-family:var(--mono); font-size:.78rem; cursor:pointer}
+  .links{display:flex; gap:16px; justify-content:center; margin-top:18px; flex-wrap:wrap}
+  .links a{color:var(--muted); font-family:var(--mono); font-size:.85rem}
+  footer{border-top:1px solid var(--border); padding-block:26px; color:var(--muted); font-family:var(--mono); font-size:.78rem}
   footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+
+  /* floating chat */
+  .chatfab{position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px)); z-index:60; display:inline-flex; align-items:center; gap:9px; padding:12px 16px; border-radius:999px; background:linear-gradient(180deg,var(--accent),color-mix(in srgb,var(--accent) 80%,#000)); color:#04130e; font-family:var(--display); font-weight:700; font-size:.9rem; box-shadow:var(--shadow), var(--glow); border:none; cursor:pointer}
+  .chatfab:hover{text-decoration:none; transform:translateY(-1px)}
+  .chatfab svg{width:18px; height:18px}
+
   .reveal{opacity:0; transform:translateY(14px); animation:rise .6s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{to{opacity:1; transform:none}}
-  @media (prefers-reduced-motion:reduce){ .reveal{animation:none; opacity:1; transform:none} }
+  @media (prefers-reduced-motion:reduce){ .reveal{animation:none; opacity:1; transform:none} html{scroll-behavior:auto} }
 </style>
 </head>
 <body>
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="#"><img src="assets/logo.png" alt="DeftShamim logo" width="30" height="30"><span>Deft<b>Shamim</b></span></a>
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="DeftShamim logo"><span>Deft<b>Shamim</b></span></a>
     <nav class="top">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#hire">Hire</a>
-      <a class="btn primary cta" href="#hire">Get in touch</a>
+      <a class="nav" href="#terminal">Terminal</a>
+      <a class="nav" href="#work">Work</a>
+      <a class="nav" href="#stack">Stack</a>
+      <a class="nav" href="#hire">Hire</a>
+      <a class="btn primary cta" href="#contact">Get in touch</a>
       <button class="toggle" id="themeBtn" aria-label="Toggle color theme">theme</button>
     </nav>
   </div>
 </header>
-<section class="hero">
-  <div class="grid-bg" aria-hidden="true"></div>
+
+<section class="hero" id="top">
+  <div class="grid" aria-hidden="true"></div>
   <div class="wrap reveal">
-    <span class="status"><span class="dot"></span> Available for freelance &amp; product builds</span>
-    <h1>I build <span class="hl">trading systems, real-time infrastructure &amp; automation</span> that actually run.</h1>
-    <p class="lede">Independent developer working across on-chain trading tooling, event-driven backends, and full-stack products. I design the system first, then ship it &mdash; Python, TypeScript, Node, Supabase, and AI where it earns its place.</p>
+    <span class="status"><span class="dot"></span> Available for freelance and product builds</span>
+    <h1>I build <span class="hl">trading systems, real-time infrastructure and automation</span> that actually run.</h1>
+    <p class="lede">Independent developer working across on-chain trading tooling, event-driven backends, and full-stack products. I design the system first, then ship it. Python, TypeScript, Node, Supabase, and AI where it earns its place.</p>
     <div class="cta-row">
-      <a class="btn primary" href="#hire">Work with me</a>
-      <a class="btn ghost" href="#work">See the work</a>
+      <a class="btn primary" href="#contact">Work with me</a>
+      <a class="btn ghost" href="#terminal">See it live</a>
     </div>
     <div class="tags">
       <span class="tag">Solana / on-chain</span>
-      <span class="tag">Trading &amp; execution engines</span>
-      <span class="tag">Telegram bots &amp; automation</span>
+      <span class="tag">Execution engines</span>
+      <span class="tag">Telegram automation</span>
       <span class="tag">Real-time (WebRTC / WebSocket)</span>
-      <span class="tag">React &amp; Node full-stack</span>
-      <span class="tag">n8n workflow orchestration</span>
+      <span class="tag">React &amp; Node</span>
+      <span class="tag">n8n orchestration</span>
     </div>
   </div>
 </section>
+
+<section id="terminal">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Live terminal</p>
+      <h2>What my systems look like running</h2>
+      <p>A live mock of the kind of market tooling I build: streaming prices, a candlestick feed, and a signal log from engines like SolExec and AlphaDesk.</p>
+    </div>
+    <div class="term-wrap reveal">
+      <div class="terminal">
+        <div class="term-top">
+          <div class="lights"><i class="l1"></i><i class="l2"></i><i class="l3"></i></div>
+          <span class="term-title">deft@markets: ~/live-feed</span>
+          <span class="term-badge">DEMO</span>
+        </div>
+        <div class="tickers" id="tickers"></div>
+        <div class="term-body">
+          <div class="chart-box"><canvas id="chart" width="600" height="240"></canvas></div>
+          <div class="log" id="log"></div>
+        </div>
+        <div class="term-foot">Illustrative demo with simulated data. Not financial advice or a performance claim.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">What I do</p>
       <h2>Systems, not just scripts</h2>
-      <p>I take a problem from architecture through to something deployed and maintainable. Common engagements:</p>
+      <p>I take a problem from architecture through to something deployed and maintainable.</p>
     </div>
     <div class="cards">
-      <div class="card"><span class="ic">01 / TRADING</span><h3>Trading &amp; execution tooling</h3><p>Market-data pipelines, signal validation, order-execution infrastructure, and analytics dashboards. Tooling and infrastructure &mdash; not financial advice or profit guarantees.</p></div>
-      <div class="card"><span class="ic">02 / AUTOMATION</span><h3>Bots &amp; workflow automation</h3><p>Telegram bots, n8n pipelines, and event-driven microservices that watch, decide, and act &mdash; with monitoring and fault tolerance built in.</p></div>
-      <div class="card"><span class="ic">03 / FULLSTACK</span><h3>Full-stack web apps</h3><p>React / Next.js front ends on Node or PHP back ends, Supabase or Postgres, auth, and payments. From landing page to admin panel.</p></div>
-      <div class="card"><span class="ic">04 / REALTIME</span><h3>Real-time systems</h3><p>WebRTC calling, WebSocket streaming, live data &mdash; the hard-timing work where latency and reliability matter.</p></div>
+      <div class="card"><span class="ic">01 / TRADING</span><h3>Trading &amp; execution tooling</h3><p>Market-data pipelines, signal validation, order-execution infrastructure, and analytics dashboards. Tooling and infrastructure, not financial advice.</p></div>
+      <div class="card"><span class="ic">02 / AUTOMATION</span><h3>Bots &amp; workflow automation</h3><p>Telegram bots, n8n pipelines, and event-driven microservices that watch, decide, and act, with monitoring and fault tolerance built in.</p></div>
+      <div class="card"><span class="ic">03 / FULLSTACK</span><h3>Full-stack web apps</h3><p>React and Next.js front ends on Node or PHP back ends, Supabase or Postgres, auth, and payments. From landing page to admin panel.</p></div>
+      <div class="card"><span class="ic">04 / REALTIME</span><h3>Real-time systems</h3><p>WebRTC calling, WebSocket streaming, live data. The hard-timing work where latency and reliability matter.</p></div>
     </div>
   </div>
 </section>
+
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Selected work</p>
       <h2>Things I have designed and built</h2>
-      <p>A focused set of my own projects. Source is private by default &mdash; I will walk you through the code or grant access on request.</p>
+      <p>A focused set of my own projects. Source is private by default. I will walk you through the code or grant access on request.</p>
     </div>
-    <div class="projects">
+    <div class="projects" id="projects">
       <article class="proj">
         <div class="proj-top"><div><h3>RugRadar</h3><div class="sub">AI memecoin safety scanner</div></div><span class="pill dev">In development</span></div>
-        <p class="desc">A Telegram bot that scans Solana memecoins before you buy &mdash; flagging rug-pull risk, whale concentration, and fresh-wallet snipers using live on-chain data. An informational safety tool, not a buy signal.</p>
-        <div class="stack"><span class="chip">TypeScript</span><span class="chip">Solana RPC</span><span class="chip">Telegram</span><span class="chip">AI risk scoring</span></div>
+        <p class="desc">A Telegram bot that scans Solana memecoins before you buy, flagging rug-pull risk, whale concentration, and fresh-wallet snipers using live on-chain data. An informational safety tool, not a buy signal.</p>
+        <div class="stackline"><span class="chip">TypeScript</span><span class="chip">Solana RPC</span><span class="chip">Telegram</span><span class="chip">AI scoring</span></div>
       </article>
       <article class="proj">
-        <div class="proj-top"><div><h3>SolExec</h3><div class="sub">event-driven Solana execution system</div></div><span class="pill dev">In development</span></div>
+        <div class="proj-top"><div><h3>SolExec</h3><div class="sub">event-driven Solana execution</div></div><span class="pill dev">In development</span></div>
         <p class="desc">A production-grade, fault-tolerant trading platform for Solana. n8n orchestrates Python microservices that listen to Telegram signals, validate them, execute via Jupiter, and manage open positions.</p>
-        <div class="stack"><span class="chip">Python</span><span class="chip">n8n</span><span class="chip">Jupiter</span><span class="chip">microservices</span></div>
+        <div class="stackline"><span class="chip">Python</span><span class="chip">n8n</span><span class="chip">Jupiter</span><span class="chip">microservices</span></div>
       </article>
       <article class="proj">
-        <div class="proj-top"><div><h3>AlphaDesk</h3><div class="sub">SMC futures analytics stack</div></div><span class="pill priv">Private</span></div>
+        <div class="proj-top"><div><h3>AlphaDesk</h3><div class="sub">SMC futures analytics</div></div><span class="pill priv">Private</span></div>
         <p class="desc">A Smart-Money-Concepts analytics platform for crypto futures: a React dashboard over a Node strategy engine, with Supabase storage, n8n automation, Telegram alerts, and a local Ollama model for analysis.</p>
-        <div class="stack"><span class="chip">React</span><span class="chip">Node</span><span class="chip">Supabase</span><span class="chip">Ollama</span></div>
+        <div class="stackline"><span class="chip">React</span><span class="chip">Node</span><span class="chip">Supabase</span><span class="chip">Ollama</span></div>
       </article>
       <article class="proj">
-        <div class="proj-top"><div><h3>PriceStream</h3><div class="sub">real-time TWAP market data</div></div><span class="pill priv">Private</span></div>
-        <p class="desc">A read-only service that computes a rolling 60-second time-weighted average price for BTCUSDT from Binance live trade stream and broadcasts it over WebSocket. No trading permissions &mdash; clean, single-purpose engineering.</p>
-        <div class="stack"><span class="chip">Python</span><span class="chip">WebSocket</span><span class="chip">Binance API</span></div>
+        <div class="proj-top"><div><h3>PriceStream</h3><div class="sub">real-time TWAP data</div></div><span class="pill priv">Private</span></div>
+        <p class="desc">A read-only service that computes a rolling 60-second time-weighted average price for BTCUSDT from Binance live trade stream and broadcasts it over WebSocket. Clean, single-purpose engineering.</p>
+        <div class="stackline"><span class="chip">Python</span><span class="chip">WebSocket</span><span class="chip">Binance API</span></div>
       </article>
       <article class="proj">
-        <div class="proj-top"><div><h3>LinguaCall</h3><div class="sub">real-time voice translation app</div></div><span class="pill priv">Private</span></div>
-        <p class="desc">An Android calling app with live voice translation and WhatsApp-style chat: WebRTC media, a Node + Socket.IO signaling server relaying SDP/ICE, Supabase for auth and data, and Firebase for incoming-call push.</p>
-        <div class="stack"><span class="chip">Android</span><span class="chip">WebRTC</span><span class="chip">Node/Socket.IO</span><span class="chip">Firebase</span></div>
+        <div class="proj-top"><div><h3>LinguaCall</h3><div class="sub">real-time voice translation</div></div><span class="pill priv">Private</span></div>
+        <p class="desc">An Android calling app with live voice translation and WhatsApp-style chat: WebRTC media, a Node and Socket.IO signaling server relaying SDP/ICE, Supabase for auth and data, and Firebase for incoming-call push.</p>
+        <div class="stackline"><span class="chip">Android</span><span class="chip">WebRTC</span><span class="chip">Node/Socket.IO</span><span class="chip">Firebase</span></div>
       </article>
       <article class="proj">
         <div class="proj-top"><div><h3>DeftScan</h3><div class="sub">security research dashboard</div></div><span class="pill priv">Private</span></div>
         <p class="desc">A cybersecurity research tool: a task dashboard with Telegram integration for tracking and coordinating security work. Built to explore the operations side of security tooling.</p>
-        <div class="stack"><span class="chip">HTML/JS</span><span class="chip">Telegram</span><span class="chip">Dashboard</span></div>
+        <div class="stackline"><span class="chip">HTML/JS</span><span class="chip">Telegram</span><span class="chip">Dashboard</span></div>
       </article>
     </div>
   </div>
 </section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Tech stack</p>
+      <h2>What I build with</h2>
+      <p>Current tools across the stack, kept up to date as I ship.</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stackcard"><h3>Languages</h3><div class="chiprow"><span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">Go</span><span class="chip">PHP</span><span class="chip">C++</span><span class="chip">SQL</span></div></div>
+      <div class="stackcard"><h3>Frontend</h3><div class="chiprow"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind CSS</span><span class="chip">Vite</span></div></div>
+      <div class="stackcard"><h3>Backend</h3><div class="chiprow"><span class="chip">Node.js</span><span class="chip">Laravel</span><span class="chip">FastAPI</span><span class="chip">Socket.IO</span></div></div>
+      <div class="stackcard"><h3>Data &amp; infra</h3><div class="chiprow"><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Redis</span><span class="chip">MongoDB</span><span class="chip">Docker</span><span class="chip">AWS</span></div></div>
+      <div class="stackcard"><h3>AI &amp; automation</h3><div class="chiprow"><span class="chip">LLM agents</span><span class="chip">Ollama</span><span class="chip">OpenAI API</span><span class="chip">MCP</span><span class="chip">n8n</span></div></div>
+      <div class="stackcard"><h3>On-chain</h3><div class="chiprow"><span class="chip">Solana</span><span class="chip">Jupiter</span><span class="chip">Web3 RPC</span><span class="chip">Telegram Bot API</span></div></div>
+    </div>
+  </div>
+</section>
+
 <section id="hire">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Work together</p>
       <h2>Hire me, or buy a build</h2>
-      <p>Two ways to work with me: a custom engagement, or one of my systems adapted and set up for you. Pricing is set per project &mdash; tell me what you need and I will scope it.</p>
+      <p>A custom engagement, or one of my systems adapted and set up for you. Pricing is set per project.</p>
     </div>
     <div class="offer-grid">
       <div class="offer">
-        <h3>Freelance build</h3><div class="price">Project-based &middot; contact for quote</div>
-        <ul><li>Architecture &amp; scoping before code</li><li>Bots, automations, dashboards, APIs</li><li>Clear milestones and handover</li><li>Source code you own</li></ul>
+        <h3>Freelance build</h3><div class="price">Project-based, contact for quote</div>
+        <ul><li>Architecture and scoping before code</li><li>Bots, automations, dashboards, APIs</li><li>Clear milestones and handover</li><li>Source code you own</li></ul>
         <a class="btn ghost" href="#contact">Start a project</a>
       </div>
       <div class="offer feature">
-        <h3>Productized system</h3><div class="price">Setup + your infrastructure</div>
-        <ul><li>One of my systems, configured for you</li><li>Deployed on your accounts &amp; keys</li><li>Walkthrough + documentation</li><li>Optional maintenance retainer</li></ul>
+        <h3>Productized system</h3><div class="price">Setup plus your infrastructure</div>
+        <ul><li>One of my systems, configured for you</li><li>Deployed on your accounts and keys</li><li>Walkthrough and documentation</li><li>Optional maintenance retainer</li></ul>
         <a class="btn primary" href="#contact">Ask about a system</a>
       </div>
       <div class="offer">
-        <h3>Advisory / review</h3><div class="price">Hourly &middot; contact for rate</div>
-        <ul><li>Architecture &amp; code review</li><li>Trading-system infrastructure audit</li><li>Automation strategy</li><li>Security &amp; secrets hygiene</li></ul>
+        <h3>Advisory / review</h3><div class="price">Hourly, contact for rate</div>
+        <ul><li>Architecture and code review</li><li>Trading-system infrastructure audit</li><li>Automation strategy</li><li>Security and secrets hygiene</li></ul>
         <a class="btn ghost" href="#contact">Book a session</a>
       </div>
     </div>
   </div>
 </section>
+
 <section id="contact">
   <div class="wrap">
     <div class="contact reveal">
@@ -240,20 +340,74 @@
       <h2>Tell me what you are building</h2>
       <p>Send a short note about the problem and your timeline. I reply to serious enquiries within a day.</p>
       <div class="copyfield"><span id="email">shamimshaharear@gmail.com</span><button id="copyBtn" type="button">Copy</button></div>
-      <div class="links"><a href="https://github.com/DeftLuke" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/Developer_Shamim" target="_blank" rel="noopener">Telegram</a><a href="mailto:shamimshaharear@gmail.com">Email</a></div>
+      <div class="links"><a href="https://t.me/Developer_Shamim" target="_blank" rel="noopener">Telegram</a><a href="https://github.com/DeftLuke" target="_blank" rel="noopener">GitHub</a><a href="mailto:shamimshaharear@gmail.com">Email</a></div>
     </div>
   </div>
 </section>
-<footer><div class="wrap"><span>&copy; <span id="yr"></span> Deft Shamim</span><span>Built and maintained by hand.</span></div></footer>
+
+<footer><div class="wrap"><span>&copy; <span id="yr"></span> Deft Shamim</span><span>Designed and built by hand.</span></div></footer>
+
+<a class="chatfab" href="https://t.me/Developer_Shamim" target="_blank" rel="noopener" aria-label="Chat on Telegram">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13 1.7 11.5c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3Z"/></svg>
+  Let's talk
+</a>
+
 <script>
-  (function(){
-    var root=document.documentElement, btn=document.getElementById('themeBtn');
-    try{ var s=localStorage.getItem('deft-theme'); if(s){ root.setAttribute('data-theme',s); } }catch(e){}
-    btn.addEventListener('click',function(){ var cur=root.getAttribute('data-theme'); var next = cur==='dark' ? 'light' : 'dark'; root.setAttribute('data-theme',next); try{ localStorage.setItem('deft-theme',next); }catch(e){} });
-    var cb=document.getElementById('copyBtn');
-    cb.addEventListener('click',function(){ var t=document.getElementById('email').textContent.trim(); var done=function(){ var o=cb.textContent; cb.textContent='Copied'; setTimeout(function(){cb.textContent=o;},1400); }; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done).catch(function(){ sel(); }); } else { sel(); } function sel(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('email')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); done(); } });
-    document.getElementById('yr').textContent=new Date().getFullYear();
-  })();
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{ var s=localStorage.getItem('deft-theme'); if(s){ root.setAttribute('data-theme',s); } }catch(e){}
+  btn.addEventListener('click',function(){ var cur=root.getAttribute('data-theme'); var next=cur==='light'?'dark':'light'; root.setAttribute('data-theme',next); try{ localStorage.setItem('deft-theme',next);}catch(e){} });
+  var cb=document.getElementById('copyBtn');
+  cb.addEventListener('click',function(){ var t=document.getElementById('email').textContent.trim(); var done=function(){var o=cb.textContent;cb.textContent='Copied';setTimeout(function(){cb.textContent=o;},1400);}; if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(sel);}else{sel();} function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var g=getSelection();g.removeAllRanges();g.addRange(r);done();} });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* 3D tilt on project cards (pointer devices only) */
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce){
+    document.querySelectorAll('.proj').forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect(); var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+        card.style.transform='rotateX('+(-py*6).toFixed(2)+'deg) rotateY('+(px*7).toFixed(2)+'deg) translateY(-3px)';
+      });
+      card.addEventListener('mouseleave',function(){ card.style.transform=''; });
+    });
+  }
+
+  /* ---- live terminal ---- */
+  var syms=[{s:'BTCUSDT',p:64200,v:38},{s:'SOLUSDT',p:172.4,v:.9},{s:'ETHUSDT',p:3420,v:14},{s:'JUP',p:0.92,v:.02}];
+  var tickEl=document.getElementById('tickers');
+  syms.forEach(function(t,i){ t.base=t.p; var d=document.createElement('div'); d.className='tick'; d.innerHTML='<div class="sym">'+t.s+'</div><div class="px" id="px'+i+'">'+fmt(t.p)+'</div><div class="chg" id="chg'+i+'">+0.00%</div>'; tickEl.appendChild(d); });
+  function fmt(n){ return n>=100?n.toFixed(1):n>=1?n.toFixed(2):n.toFixed(4); }
+  function stepTickers(){ syms.forEach(function(t,i){ t.p=Math.max(t.p+(Math.random()-.5)*t.v, t.base*.5); var chg=(t.p-t.base)/t.base*100; var pxE=document.getElementById('px'+i), chgE=document.getElementById('chg'+i); if(pxE)pxE.textContent=fmt(t.p); if(chgE){chgE.textContent=(chg>=0?'+':'')+chg.toFixed(2)+'%'; chgE.className='chg '+(chg>=0?'up':'down');} }); }
+
+  var logEl=document.getElementById('log');
+  var msgs=['SolExec: signal received · SOL','SolExec: validation passed','SolExec: order filled via Jupiter','AlphaDesk: SMC demand zone tagged','RugRadar: scanned mint, risk LOW','PriceStream: TWAP window refreshed','AlphaDesk: liquidity sweep detected','SolExec: position managed, TP set'];
+  function logLine(){ var row=document.createElement('div'); row.className='row'; var t=new Date().toLocaleTimeString('en-GB',{hour12:false}); row.innerHTML='<span>'+t+'</span> '+msgs[Math.floor(Math.random()*msgs.length)]; logEl.appendChild(row); while(logEl.children.length>9) logEl.removeChild(logEl.firstChild); }
+
+  var cv=document.getElementById('chart'), ctx=cv.getContext('2d');
+  var candles=[], price=64200, N=48, dpr=Math.min(window.devicePixelRatio||1,2);
+  function seed(){ candles=[]; var p=price; for(var i=0;i<N;i++){ var o=p, c=p+(Math.random()-.5)*380; var h=Math.max(o,c)+Math.random()*140, l=Math.min(o,c)-Math.random()*140; candles.push({o:o,h:h,l:l,c:c}); p=c; } price=p; }
+  function addCandle(){ var o=price, c=price+(Math.random()-.5)*380; var h=Math.max(o,c)+Math.random()*140, l=Math.min(o,c)-Math.random()*140; candles.push({o:o,h:h,l:l,c:c}); if(candles.length>N)candles.shift(); price=c; }
+  function resize(){ var w=cv.clientWidth||600; cv.width=w*dpr; cv.height=240*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); draw(); }
+  function draw(){
+    var w=cv.clientWidth||600, h=240; ctx.clearRect(0,0,w,h);
+    var css=getComputedStyle(document.documentElement); var up=css.getPropertyValue('--up').trim()||'#2fe0ad', dn=css.getPropertyValue('--down').trim()||'#ff6b6b', grid=css.getPropertyValue('--border').trim()||'#1e2a37';
+    var hi=-1e9, lo=1e9; candles.forEach(function(k){ hi=Math.max(hi,k.h); lo=Math.min(lo,k.l); }); var pad=(hi-lo)*.1||1; hi+=pad; lo-=pad;
+    var y=function(v){ return (h-24) - (v-lo)/(hi-lo)*(h-40) + 8; };
+    ctx.strokeStyle=grid; ctx.globalAlpha=.5; ctx.lineWidth=1;
+    for(var g=0;g<4;g++){ var gy=8+g*((h-32)/3); ctx.beginPath(); ctx.moveTo(0,gy); ctx.lineTo(w,gy); ctx.stroke(); }
+    ctx.globalAlpha=1;
+    var cw=w/candles.length, bw=Math.max(cw*.55,2);
+    candles.forEach(function(k,i){ var x=i*cw+cw/2; var col=k.c>=k.o?up:dn; ctx.strokeStyle=col; ctx.fillStyle=col; ctx.lineWidth=1;
+      ctx.beginPath(); ctx.moveTo(x,y(k.h)); ctx.lineTo(x,y(k.l)); ctx.stroke();
+      var yo=y(k.o), yc=y(k.c); ctx.fillRect(x-bw/2, Math.min(yo,yc), bw, Math.max(Math.abs(yc-yo),1)); });
+    var last=candles[candles.length-1]; if(last){ ctx.strokeStyle=up; ctx.globalAlpha=.35; ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(0,y(last.c)); ctx.lineTo(w,y(last.c)); ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha=1; }
+  }
+  seed(); resize(); window.addEventListener('resize',resize);
+  if(!reduce){ setInterval(function(){ addCandle(); draw(); }, 1400); setInterval(stepTickers, 900); setInterval(logLine, 2200); logLine(); }
+  else { for(var i=0;i<4;i++) logLine(); }
+})();
 </script>
 </body>
 </html>
