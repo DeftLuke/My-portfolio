@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Deft Shamim — Systems & Automation Developer</title>
 <meta name="description" content="Independent developer building trading systems, real-time infrastructure, and automation. Available for hire and productized builds.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1.5' y='1.5' width='29' height='29' rx='8' fill='none' stroke='%2335d0a5' stroke-width='2'/%3E%3Crect x='9' y='14' width='3' height='9' rx='1.5' fill='%2335d0a5'/%3E%3Crect x='14.5' y='9' width='3' height='14' rx='1.5' fill='%2335d0a5'/%3E%3Crect x='20' y='12' width='3' height='11' rx='1.5' fill='%2335d0a5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
     color-scheme: light;
     --bg:#f6f8fa; --surface:#ffffff; --surface-2:#eef1f4; --border:#d5dbe2;
     --text:#0b0f14; --muted:#57606a; --accent:#0c8f6d; --accent-2:#2f6fed;
     --good:#0c8f6d; --warn:#b06a00; --shadow:0 1px 2px rgba(11,15,20,.06),0 8px 24px rgba(11,15,20,.06);
-    --display:'Sora',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Manrope',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
     --maxw:1080px;
   }
   @media (prefers-color-scheme: dark){
@@ -33,7 +34,7 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0}
-  body{ background:var(--bg); color:var(--text); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  body{ background:var(--bg); color:var(--text); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
   :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
@@ -41,14 +42,17 @@
   h1,h2,h3{font-family:var(--display); font-weight:600; line-height:1.15; text-wrap:balance; margin:0}
   .eyebrow{font-family:var(--mono); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 .6rem}
   header.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:color-mix(in srgb,var(--bg) 86%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--border)}
-  .bar .wrap{display:flex; align-items:center; gap:16px; height:60px}
-  .brand{font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:1.05rem}
+  .bar .wrap{display:flex; align-items:center; gap:14px; min-height:60px; padding-block:10px}
+  .brand{display:inline-flex; align-items:center; gap:9px; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:1.05rem; text-decoration:none; color:var(--text)}
+  .brand svg{display:block; width:26px; height:26px; flex:none}
   .brand b{color:var(--accent)}
   nav.top{margin-left:auto; display:flex; gap:22px; align-items:center}
-  nav.top a{color:var(--muted); font-size:.92rem}
+  nav.top a{color:var(--muted); font-size:.92rem; white-space:nowrap}
   nav.top a:hover{color:var(--text); text-decoration:none}
-  .toggle{background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:8px; padding:7px 10px; cursor:pointer; font-family:var(--mono); font-size:.8rem}
-  @media (max-width:720px){ nav.top a:not(.cta){display:none} }
+  .toggle{background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:8px; padding:7px 10px; cursor:pointer; font-family:var(--mono); font-size:.78rem; white-space:nowrap; flex:none}
+  .btn.cta{padding:8px 14px}
+  @media (max-width:720px){ nav.top a:not(.cta){display:none} nav.top{gap:12px} .btn.cta{padding:7px 12px; font-size:.85rem} }
+  @media (max-width:360px){ .toggle{display:none} }
   .hero{padding-block:72px 40px; position:relative; overflow:hidden}
   .hero .grid-bg{position:absolute; inset:0; background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size:44px 44px; opacity:.25; mask-image:radial-gradient(ellipse 70% 60% at 30% 0%,#000 20%,transparent 75%); pointer-events:none}
   .hero .wrap{position:relative}
@@ -111,12 +115,12 @@
 <body>
 <header class="bar">
   <div class="wrap">
-    <span class="brand">Deft<b>Shamim</b></span>
+    <a class="brand" href="#"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="none" style="stroke:var(--accent)" stroke-width="2"/><rect x="9" y="14" width="3" height="9" rx="1.5" style="fill:var(--accent)"/><rect x="14.5" y="9" width="3" height="14" rx="1.5" style="fill:var(--accent)"/><rect x="20" y="12" width="3" height="11" rx="1.5" style="fill:var(--accent)"/></svg><span>Deft<b>Shamim</b></span></a>
     <nav class="top">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#hire">Hire</a>
-      <a class="btn primary cta" href="#hire" style="padding:8px 14px">Get in touch</a>
+      <a class="btn primary cta" href="#hire">Get in touch</a>
       <button class="toggle" id="themeBtn" aria-label="Toggle color theme">theme</button>
     </nav>
   </div>
@@ -230,7 +234,7 @@
       <h2>Tell me what you are building</h2>
       <p>Send a short note about the problem and your timeline. I reply to serious enquiries within a day.</p>
       <div class="copyfield"><span id="email">shamimshaharear@gmail.com</span><button id="copyBtn" type="button">Copy</button></div>
-      <div class="links"><a href="https://github.com/DeftLuke" target="_blank" rel="noopener">GitHub</a><a href="mailto:shamimshaharear@gmail.com">Email</a></div>
+      <div class="links"><a href="https://github.com/DeftLuke" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/Developer_Shamim" target="_blank" rel="noopener">Telegram</a><a href="mailto:shamimshaharear@gmail.com">Email</a></div>
     </div>
   </div>
 </section>
