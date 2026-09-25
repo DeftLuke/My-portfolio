@@ -1,3 +1,3 @@
-﻿# Deft Shamim - Developer Portfolio
+﻿# Deft Shamim Portfolio
 
-Single-page portfolio. Live: https://deftluke.github.io/My-portfolio/
+Live: https://deftluke.github.io/My-portfolio/
